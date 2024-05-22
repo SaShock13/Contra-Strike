@@ -30,16 +30,22 @@ public class GameUI : MonoBehaviour
 
     
 
-    private void Update()
+    private void OnEnable()
     {
+        Debug.Log("UI Enabled");
     }
 
-    private void Start()
+    private void Awake()
     {
         playerWeapon.onAmmoCountChangedEvent += UpdateAmmoCount;
         playerWeapon.onTemperatureChangedEvent += UpdTemperature;
         playerHealth.onHealthChangedEvent += UpdHealth;
         deathCounter.onDeathCountChangedEvent += UpdDeaths;
+    }
+    
+    private void Start()
+    {
+        Debug.Log("UI Started");
         //healthCount = maxHealthCount;
         UpdateCounters();
     }
@@ -55,6 +61,7 @@ public class GameUI : MonoBehaviour
 
     public void PauseBtnClick()
     {
+        Debug.Log("Смертей "+Statistic.killsCount);
         gameManager.PauseGame();
         pausePanel.SetActive(true);
     }

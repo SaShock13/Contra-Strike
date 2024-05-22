@@ -16,6 +16,7 @@ public class DeathCounter:MonoBehaviour
     public void AddDeath()
     {
         deaths++;
+        Statistic.killsCount++;
         onDeathCountChangedEvent?.Invoke(deaths);
 
     }

@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
 
     public void ReplayBtnClick()
     {
+        Statistic.killsCount = 0;
         SceneManager.LoadScene(1);
     }
 

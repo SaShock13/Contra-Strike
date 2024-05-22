@@ -31,6 +31,7 @@ public class Landmine : MonoBehaviour
 
     private void Awake()
     {
+
         explosionSound = GetComponent<AudioSource>();
         explosionEffect = GetComponentInChildren<VisualEffect>();
         explosionEffect.Stop();
@@ -50,6 +51,7 @@ public class Landmine : MonoBehaviour
         MakeDamageInRange();
         explodePhysics.enabled = true;
         explosionSound?.Play();
+        sprite.enabled = false;
         yield return new WaitForSeconds(1.5f);
         Destroy(gameObject);
     }

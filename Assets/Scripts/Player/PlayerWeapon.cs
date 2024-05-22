@@ -96,8 +96,8 @@ public class PlayerWeapon : MonoBehaviour
         }
         //gunTemperature = (gunTemperature - (Time.deltaTime * gunCoolingCoef)) < 40 ? 40 : gunTemperature - (Time.deltaTime * gunCoolingCoef);
         //gameUI.UpdateCounters();
-        //Debug.Log("Температура оружия"+ gunTemperature);
-        //Debug.Log("Пуль в очереди" + burstCounter);
+        //Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ"+ gunTemperature);
+        //Debug.Log("пїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ" + burstCounter);
 
     }
 
@@ -161,8 +161,8 @@ public class PlayerWeapon : MonoBehaviour
                     }
                     if (bulletCounter % gunClipMax == 0 & bulletCounter > 0)
                     {
-                        gameUI.StartShowInfo("Для перезарядки нажмите R ...");
-                        Debug.Log("Нужна перезарядка R ");
+                        gameUI.StartShowInfo("пїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ R ...");
+                        Debug.Log("пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ R ");
                         needToReload = true;
                     }
                     yield return new WaitForSeconds(shootPause);
@@ -171,7 +171,7 @@ public class PlayerWeapon : MonoBehaviour
                 else
                 {
                     soundManager.falseShot.Play();
-                    Debug.Log("Патроны закончились");
+                    Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ");
                 }
             }
             else soundManager.falseShot.Play();

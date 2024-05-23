@@ -55,10 +55,8 @@ public class PlayerWeapon : MonoBehaviour
     public delegate void OnTemperatureChanged(float tempNow);
     public event OnTemperatureChanged onTemperatureChangedEvent;
 
-
     [Header("Other")]
     [SerializeField] GameObject persSprite;
-
     bool canFire = true;
     bool needToReload = false;
     bool isGunOverHeated = false;
@@ -70,11 +68,6 @@ public class PlayerWeapon : MonoBehaviour
         onAmmoCountChangedEvent?.Invoke(bulletCounter);
         onTemperatureChangedEvent?.Invoke(gunTemperature);
         soundManager = FindObjectOfType<SoundManager>();
-        
-        
-        //gameUI.ammoCount = bulletCounter;
-        //gameUI.gunTemperature = gunTemperature;
-        //gameUI.UpdateCounters();
     }
 
     private void Update()
@@ -83,22 +76,16 @@ public class PlayerWeapon : MonoBehaviour
     }
 
     void GunTemperatureTracker()
-    {        
-
+    {     
         if ((gunTemperature - (Time.deltaTime * gunCoolingCoef)) < 40 )
         {
             gunTemperature = 40;
         }
         else
         {
-            gunTemperature -= Time.deltaTime * gunCoolingCoef;
+            gunTemperature -= Time.fixedDeltaTime * gunCoolingCoef;
             onTemperatureChangedEvent?.Invoke(gunTemperature);
         }
-        //gunTemperature = (gunTemperature - (Time.deltaTime * gunCoolingCoef)) < 40 ? 40 : gunTemperature - (Time.deltaTime * gunCoolingCoef);
-        //gameUI.UpdateCounters();
-        //Debug.Log("����������� ������"+ gunTemperature);
-        //Debug.Log("���� � �������" + burstCounter);
-
     }
 
     void BulletCounter()
@@ -118,7 +105,6 @@ public class PlayerWeapon : MonoBehaviour
 
     public void GunAttack()
     {
-           // Debug.Log("Attack");
         switch (shootMode)
         {
             case ShootMode.Single:
@@ -161,8 +147,7 @@ public class PlayerWeapon : MonoBehaviour
                     }
                     if (bulletCounter % gunClipMax == 0 & bulletCounter > 0)
                     {
-                        gameUI.StartShowInfo("��� ����������� ������� R ...");
-                        Debug.Log("����� ����������� R ");
+                        gameUI.StartShowInfo("Для перезарядки нажмите R ...");
                         needToReload = true;
                     }
                     yield return new WaitForSeconds(shootPause);
@@ -171,7 +156,6 @@ public class PlayerWeapon : MonoBehaviour
                 else
                 {
                     soundManager.falseShot.Play();
-                    Debug.Log("������� �����������");
                 }
             }
             else soundManager.falseShot.Play();
@@ -207,8 +191,6 @@ public class PlayerWeapon : MonoBehaviour
 
     void ShootWithRay()
     {
-        
-        //soundManager?.shot.Play();
         shotVector = bulletEmiterTransform.position - emmiterAimerTransform.position;
         RaycastHit2D hit = Physics2D.Raycast(bulletEmiterTransform.position, shotVector, 20f);
         Debug.DrawRay(bulletEmiterTransform.position, shotVector, Color.blue);
@@ -227,9 +209,7 @@ public class PlayerWeapon : MonoBehaviour
                 }
                 Destroy(hitEffect,0.3f);
             }  
-
         }
-        
     }
     IEnumerator CooolingGun()
     {

@@ -11,6 +11,7 @@ public class MachineGunnerBehaviour : EnemyBehaviour
     [SerializeField] GameObject bullet;
     [SerializeField] GameObject player;
     [SerializeField] float bulletForce;
+    [SerializeField] LayerMask playerLayerMask;
     
     Animator animator;
     SoundManager soundManager;
@@ -71,7 +72,7 @@ public class MachineGunnerBehaviour : EnemyBehaviour
 
     void ShotWithRay()
     {
-        RaycastHit2D hit = Physics2D.Raycast(bulletEmiterTransform.position, shotVector, 20f);
+        RaycastHit2D hit = Physics2D.Raycast(bulletEmiterTransform.position, shotVector, 20f, playerLayerMask);
         if (hit != null & hit.collider != null)
         {
             if (hit.collider.TryGetComponent<IDamageable>(out IDamageable objToDamage))

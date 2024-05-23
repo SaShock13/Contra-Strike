@@ -146,8 +146,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d77e015c9f1a1eb44a23bc84ec1b265d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FlipbookNumU: 10
-  FlipbookNumV: 10
+  FlipbookNumU: 5
+  FlipbookNumV: 5
   Mode: 0
 --- !u!114 &3093636464031232679
 MonoBehaviour:

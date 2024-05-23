@@ -44,9 +44,8 @@ public class Landmine : MonoBehaviour
 
     IEnumerator Detonate()
     {
-        yield return new WaitForSeconds(detonateTime-1);
+        yield return new WaitForSeconds(detonateTime);
         explosionEffect.Play();
-        yield return new WaitForSeconds(1);
         StartCoroutine(nameof(FlashCoroutine));
         MakeDamageInRange();
         explodePhysics.enabled = true;

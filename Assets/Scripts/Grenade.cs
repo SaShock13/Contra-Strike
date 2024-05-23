@@ -38,9 +38,8 @@ public class Grenade : MonoBehaviour,IDamageable
 
     public IEnumerator DetonatePause()
     {
-        yield return new WaitForSeconds(detonateTime-1);
+        yield return new WaitForSeconds(detonateTime);
         PlayVisualEffect();
-        yield return new WaitForSeconds(1);
         Detonate();
         yield return new WaitForSeconds(lifetime - detonateTime);
         DestroyGrenade();
@@ -50,7 +49,6 @@ public class Grenade : MonoBehaviour,IDamageable
     {
         rb.isKinematic = true;
         PlayVisualEffect();
-        yield return new WaitForSeconds(1);
         Detonate();
         yield return new WaitForSeconds(1.2f);
         DestroyGrenade();

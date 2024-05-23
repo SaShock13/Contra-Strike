@@ -7,6 +7,9 @@ public class TruckDamage : MonoBehaviour, IDamageable
 {
     [SerializeField] Sprite wholeTruckSprite;
     [SerializeField] Sprite brokenTruckSprite;
+    [SerializeField] GameObject hider;
+    [SerializeField] GameObject hiderBack;
+    SoundManager soundManager;
     Collider2D[] colliders;
     VisualEffect explodeVFX;
     VisualEffect fireFX;
@@ -17,13 +20,12 @@ public class TruckDamage : MonoBehaviour, IDamageable
 
     private void Awake()
     {
+        soundManager = FindObjectOfType<SoundManager>();
         sr = GetComponent<SpriteRenderer>(); 
         colliders = GetComponents<Collider2D>();
         visualEffects = GetComponentsInChildren<VisualEffect>();
         explodeVFX = visualEffects[0];
-        //explodeVFX.Stop();
         fireFX = visualEffects[1];
-        //fireFX.Stop();
 
     }
 
@@ -46,6 +48,8 @@ public class TruckDamage : MonoBehaviour, IDamageable
     void Broke()
     {
         sr.sprite = brokenTruckSprite;
+        hider.SetActive(false);
+        hiderBack.SetActive(true);
         foreach (var coll in colliders)
         {
             coll.enabled = false;
@@ -55,11 +59,11 @@ public class TruckDamage : MonoBehaviour, IDamageable
     IEnumerator PlayFX()
     {
         fireFX.enabled = true;
-        explodeVFX.enabled = true;
-        //fireFX.Play();
-        //explodeVFX.Play();
 
         yield return new WaitForSeconds(1);
+        soundManager.explosion.Play();
+        explodeVFX.enabled = true;
+
         Broke();
         fireFX.Stop();
     }

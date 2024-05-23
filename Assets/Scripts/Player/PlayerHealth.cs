@@ -78,6 +78,7 @@ public class PlayerHealth : MonoBehaviour,IDamageable,IHealable
     public void Heal(int healAmount)
     {
         health += healAmount;
+        health = health < maxHealth ? health : maxHealth;
         RefreshUI();
     }
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering.Universal;
 using UnityEngine.VFX;
 
-public class Landmine : MonoBehaviour
+public class Landmine : MonoBehaviour,IDamageable
 {
     [SerializeField, Range(0.2f,2)] float detonateTime;
     [SerializeField] int landmineDamage;
@@ -24,7 +24,7 @@ public class Landmine : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            StartCoroutine(nameof(Detonate)); 
+            StartCoroutine(Detonate()); 
         }
 
     }
@@ -42,9 +42,12 @@ public class Landmine : MonoBehaviour
 
 
 
-    IEnumerator Detonate()
+    IEnumerator Detonate(bool isWithDelay = true)
     {
-        yield return new WaitForSeconds(detonateTime);
+        if(isWithDelay)
+        {
+            yield return new WaitForSeconds(detonateTime);
+        }
         explosionEffect.Play();
         StartCoroutine(nameof(FlashCoroutine));
         MakeDamageInRange();
@@ -73,5 +76,10 @@ public class Landmine : MonoBehaviour
         flash.enabled = true;
         yield return new WaitForSeconds(flashTime);
         flash.enabled = false;
+    }
+
+    public void TakeDamage(int damage, bool onLeft = true)
+    {
+        StartCoroutine(Detonate(false));
     }
 }

@@ -39,29 +39,15 @@ public class GameUI : MonoBehaviour
     {
         playerWeapon.onAmmoCountChangedEvent += UpdateAmmoCount;
         playerWeapon.onTemperatureChangedEvent += UpdTemperature;
+        playerWeapon.onOverHeatEvent += OverHeatMessage;
+        playerWeapon.onCooledEvent += WeaponCooled;
         playerHealth.onHealthChangedEvent += UpdHealth;
         deathCounter.onDeathCountChangedEvent += UpdDeaths;
     }
     
-    private void Start()
-    {
-        Debug.Log("UI Started");
-        //healthCount = maxHealthCount;
-        UpdateCounters();
-    }
-
-    public void UpdateCounters()
-    {
-        //ammoCounter.text = ammoCount.ToString();
-        //killsCounter.text = killsCount.ToString();
-        //healthCounter.text = healthCount.ToString();
-        //temperatureCounter.text = gunTemperature.ToString("#");
-        
-    }
 
     public void PauseBtnClick()
     {
-        Debug.Log("������� "+Statistic.killsCount);
         gameManager.PauseGame();
         pausePanel.SetActive(true);
     }
@@ -82,6 +68,7 @@ public class GameUI : MonoBehaviour
     public void StopShowInfo()
     {
         IsShowInfo = false;
+        StopCoroutine(BlinkText(infoText));
     }
 
     IEnumerator BlinkText(TMP_Text text)
@@ -119,4 +106,17 @@ public class GameUI : MonoBehaviour
     {
         killsCounter.text = deaths.ToString();
     }
+
+    void OverHeatMessage()
+    {
+        IsShowInfo = true;
+        StartShowInfo("Перегрев!!! Остудите оружие");
+    }    
+
+    void WeaponCooled()
+    {
+        IsShowInfo = false;
+        StopShowInfo();
+    }
+
 }

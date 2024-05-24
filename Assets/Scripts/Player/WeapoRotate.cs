@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class WeapoRotate : MonoBehaviour
 {
-    //??????????????Поворот перса и оружия
+    //??????????????пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ
 
     [SerializeField] float offsetFromMouseAngle;
     [SerializeField] GameObject pers;
@@ -25,7 +25,7 @@ public class WeapoRotate : MonoBehaviour
         directionToMouse = Camera.main.ScreenToWorldPoint(Input.mousePosition) - pivot.position;
         toMouseAngle = Mathf.Atan2(directionToMouse.x, directionToMouse.y) * Mathf.Rad2Deg;
         playerScale = Vector3.one;
-        //SetAngleConstrains();        
+        SetAngleConstrains();        
         angleToRotateZ = (toMouseAngle <0) ? 180 + (toMouseAngle * -1 + offsetFromMouseAngle) + 5 : (toMouseAngle * -1 + offsetFromMouseAngle)-5;            
         transform.rotation = Quaternion.Euler(0, 0, angleToRotateZ  );
         if (toMouseAngle>0)
@@ -40,22 +40,22 @@ public class WeapoRotate : MonoBehaviour
     {
         if (toMouseAngle < 30 & toMouseAngle >= 0)
         {
-            //Debug.Log("Меньше 0 ");
+            //Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅ 0 ");
             toMouseAngle = 30;
         }
         else if (toMouseAngle > 150 & toMouseAngle <= 180)
         {
-            //Debug.Log("Больше 180 ");
+            //Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅ 180 ");
             toMouseAngle = 150;
         }
         else if (toMouseAngle > -30 & toMouseAngle < 0)
         {
-            //Debug.Log("Больше 180 ");
+            //Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅ 180 ");
             toMouseAngle = -30;
         }
         else if (toMouseAngle < -150 & toMouseAngle > -180)
         {
-            //Debug.Log("Больше 180 ");
+            //Debug.Log("пїЅпїЅпїЅпїЅпїЅпїЅ 180 ");
             toMouseAngle = -150;
         }
     }

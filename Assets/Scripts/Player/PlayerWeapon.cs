@@ -54,6 +54,12 @@ public class PlayerWeapon : MonoBehaviour
 
     public delegate void OnTemperatureChanged(float tempNow);
     public event OnTemperatureChanged onTemperatureChangedEvent;
+    public delegate void OnOverHeat();
+    public event OnOverHeat onOverHeatEvent;
+    public delegate void OnCooled();
+    public event OnCooled onCooledEvent;
+
+
 
     [Header("Other")]
     [SerializeField] GameObject persSprite;

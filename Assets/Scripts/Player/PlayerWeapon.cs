@@ -76,14 +76,14 @@ public class PlayerWeapon : MonoBehaviour
         soundManager = FindObjectOfType<SoundManager>();
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
         GunTemperatureTracker();
     }
 
     void GunTemperatureTracker()
     {     
-        if ((gunTemperature - (Time.deltaTime * gunCoolingCoef)) < 40 )
+        if ((gunTemperature - (Time.fixedDeltaTime * gunCoolingCoef)) < 40 )
         {
             gunTemperature = 40;
         }
@@ -144,11 +144,12 @@ public class PlayerWeapon : MonoBehaviour
                     ShootWithRay();
                     burstCounter++;
                     DecreaseBulletCount();
-                    gunTemperature += Time.deltaTime * gunHeatIncreaseCoef;
+                    gunTemperature += Time.fixedDeltaTime * gunHeatIncreaseCoef;
                     onTemperatureChangedEvent?.Invoke(gunTemperature);
-                    if (gunTemperature > maxGunTemperature)
+                    if (gunTemperature >= maxGunTemperature)
                     {
                         isGunOverHeated = true;
+                        onOverHeatEvent?.Invoke();
                         StartCoroutine(nameof(CooolingGun));
                     }
                     if (bulletCounter % gunClipMax == 0 & bulletCounter > 0)
@@ -221,6 +222,7 @@ public class PlayerWeapon : MonoBehaviour
     {
         yield return new WaitForSeconds(weaponCoolingTime);
         isGunOverHeated = false;
+        onCooledEvent?.Invoke();
     }
 
     public void Reload()

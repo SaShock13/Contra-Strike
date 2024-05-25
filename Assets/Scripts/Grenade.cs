@@ -66,7 +66,10 @@ public class Grenade : MonoBehaviour,IDamageable
 
     void DestroyGrenade()
     {
-        Destroy(gameObject);
+        if (gameObject!=null)
+        {
+            Destroy(gameObject); 
+        }
     }
 
     void PlayVisualEffect()

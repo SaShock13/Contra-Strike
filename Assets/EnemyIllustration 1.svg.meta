@@ -44,6 +44,7 @@ ScriptedImporter:
       pivot: {x: 0.4999598, y: 0.49993294}
       alignment: 0
       border: {x: 425, y: 159, z: 4461, w: 661}
+      customData: 
       rect:
         serializedVersion: 2
         x: 0

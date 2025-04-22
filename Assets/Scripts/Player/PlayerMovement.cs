@@ -44,17 +44,15 @@ public class PlayerMovement : MonoBehaviour
         
     }
 
-    private void Update()
-    {
-        
-    }
 
     public void Move(float horizontal)
     {
-        Vector2 resultVector = new Vector2(horizontal, 0) * playerMoveSpeed;
-        rb.AddForce(resultVector, ForceMode2D.Impulse);
+        Vector2 resultVector = new Vector2(horizontal * playerMoveSpeed, rb.linearVelocity.y) ;
+        //rb.AddForce(resultVector, ForceMode2D.Impulse);
+        rb.linearVelocity = resultVector;
+        //rb.MovePosition(resultVector);
         float animatorX = persSprite.transform.localScale.x == -1 ? resultVector.x * -1 : resultVector.x;
-
+        Debug.Log(animatorX);
         if (isOnTheFloor)
         {
             animator.SetFloat("X", animatorX);

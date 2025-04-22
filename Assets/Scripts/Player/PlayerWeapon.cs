@@ -1,17 +1,20 @@
 using System;
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.VFX;
 
 public class PlayerWeapon : MonoBehaviour
 {
     SoundManager soundManager;
 
+    [SerializeField] Texture2D aimCursor;
     [SerializeField] GameObject inLiveTargetFX;
     [SerializeField] GameObject inNotLiveTargetFX;
     [SerializeField] GameUI gameUI;
+    [SerializeField] Image singleModeImage;
+    [SerializeField] Image shortModeImage;
+    [SerializeField] Image longModeImage;
 
     [Header("Grenade Preferences")]
     [SerializeField] Transform grenadeEmiterTransform;
@@ -42,7 +45,7 @@ public class PlayerWeapon : MonoBehaviour
     [SerializeField] AudioSource reloadSound;
     [SerializeField] AudioSource falseShotSound;
     [SerializeField] AudioSource shotSound;
-    [SerializeField] ShootMode shootMode;
+    [SerializeField] ShootMode shortMode;
     [SerializeField] float maxGunTemperature;
     [SerializeField] VisualEffect muzzleFlashEffect;
     [SerializeField] GameObject flashlight;
@@ -71,9 +74,42 @@ public class PlayerWeapon : MonoBehaviour
 
     private void Start()
     {
+        Cursor.SetCursor(aimCursor,Vector2.zero,CursorMode.Auto);
         onAmmoCountChangedEvent?.Invoke(bulletCounter);
         onTemperatureChangedEvent?.Invoke(gunTemperature);
         soundManager = FindObjectOfType<SoundManager>();
+    }
+
+    private void Update()
+    {
+        ChangeShootModeHandler();
+    }
+
+    private void ChangeShootModeHandler()
+    {
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            shortMode = ShootMode.Single;
+            singleModeImage.enabled = true;
+            shortModeImage.enabled = false;
+            longModeImage.enabled = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            shortMode = ShootMode.Short;
+            singleModeImage.enabled = false;
+            shortModeImage.enabled = true;
+            longModeImage.enabled = false;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            shortMode = ShootMode.Long;
+            singleModeImage.enabled = false;
+            shortModeImage.enabled = false;
+            longModeImage.enabled = true;
+        }
     }
 
     private void FixedUpdate()
@@ -111,7 +147,7 @@ public class PlayerWeapon : MonoBehaviour
 
     public void GunAttack()
     {
-        switch (shootMode)
+        switch (shortMode)
         {
             case ShootMode.Single:
                 shortBurstCount = 1;
@@ -175,26 +211,7 @@ public class PlayerWeapon : MonoBehaviour
         onAmmoCountChangedEvent?.Invoke(bulletCounter);
     }
 
-    IEnumerator ShootWithObjectCoroutine()
-    {
-        shotVector = bulletEmiterTransform.position - emmiterAimerTransform.position;        
-        Quaternion bulletRotation = Quaternion.Euler(new Vector3(0, 0, Vector3.Angle(Vector3.right, shotVector)));
-        var currentBullet = Instantiate(bullet, bulletEmiterTransform.position, bulletRotation);
-        currentBullet.GetComponent<Rigidbody2D>().AddForce(shotVector * bulletForce);
-        yield return new WaitForSeconds(bulletToDestroyPause);
-        if (currentBullet != null)
-        {
-            Destroy(currentBullet);
-        }
-    }
-    void ShootWithObject()
-    {
-        shotVector = bulletEmiterTransform.position - emmiterAimerTransform.position;
-        Quaternion bulletRotation = Quaternion.Euler(new Vector3(0, 0, Vector3.Angle(Vector3.right, shotVector)));
-        var currentBullet = Instantiate(bullet, bulletEmiterTransform.position, bulletRotation);
-        Instantiate(flashlight, bulletEmiterTransform.position, Quaternion.identity);
-        currentBullet.GetComponent<Rigidbody2D>().AddForce(shotVector * bulletForce);        
-    }
+   
 
     void ShootWithRay()
     {
@@ -203,6 +220,15 @@ public class PlayerWeapon : MonoBehaviour
         Debug.DrawRay(bulletEmiterTransform.position, shotVector, Color.blue);
         if (hit!= null& hit.collider!=null)
         {
+            if(hit.collider.CompareTag("Head"))
+            {
+                var damageabe = hit.collider.GetComponentInParent<IDamageable>();
+                if(damageabe!=null)
+                {
+                    damageabe.TakeDamage(10);
+                    Debug.Log("HeadShot");
+                }
+            }
             if (hit.collider.TryGetComponent<IDamageable>(out IDamageable objToDamage))
             {
                 objToDamage.TakeDamage(1);
@@ -215,7 +241,13 @@ public class PlayerWeapon : MonoBehaviour
                     hitEffect =Instantiate(inNotLiveTargetFX, hit.point, Quaternion.identity);
                 }
                 Destroy(hitEffect,0.3f);
-            }  
+            }
+            else 
+            {
+                //эффект попадания в платформу
+                hitEffect = Instantiate(inNotLiveTargetFX, hit.point, Quaternion.identity);
+                Destroy(hitEffect, 0.3f);
+            }
         }
     }
     IEnumerator CooolingGun()

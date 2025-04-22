@@ -10,7 +10,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
     protected float health;
     [SerializeField] float maxHealth;
     public bool alive = true;
-    protected Collider2D enemyCollider;
+    protected Collider2D [] bodyColliders;
     [SerializeField] GameUI gameUI;
     [SerializeField] DeathCounter deathCounter;
     [SerializeField,RequiredMember] Image healthBar;
@@ -23,8 +23,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
             healthBar.enabled = false; 
         }
         health = maxHealth;
-        enemyCollider = GetComponent<Collider2D>();
-
+        bodyColliders = GetComponentsInChildren<Collider2D>();
     }
 
     void Update()
@@ -58,11 +57,15 @@ public class EnemyHealth : MonoBehaviour,IDamageable
         var soundOfDeath = gameObject.GetComponent<AudioSource>();
         soundOfDeath?.Play();
 
-
-
-        enemyCollider.attachedRigidbody.bodyType = RigidbodyType2D.Static;
-        enemyCollider.enabled = false;
+        foreach (var bodyCollider in bodyColliders)
+        {
+            bodyCollider.attachedRigidbody.bodyType = RigidbodyType2D.Static;
+            Debug.Log($" body {bodyCollider.name}");
+            bodyCollider.enabled = false;
+        }
+        
     }
+
     virtual public void WhenDead()
     {
        

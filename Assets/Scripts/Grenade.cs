@@ -7,6 +7,7 @@ using UnityEngine.VFX;
 public class Grenade : MonoBehaviour,IDamageable
 {
     VisualEffect explosionEffect;
+    [SerializeField] GameObject explosionPrefab;
     AudioSource explosionSound;
     PointEffector2D explodePhysics;
     SpriteRenderer sprite;
@@ -74,7 +75,9 @@ public class Grenade : MonoBehaviour,IDamageable
 
     void PlayVisualEffect()
     {
-        explosionEffect.Play();
+        //explosionEffect.Play();
+        var fxPrefab = Instantiate(explosionPrefab,transform.position,Quaternion.identity, null);
+        Destroy(fxPrefab,1.5f);
     }
 
     IEnumerator FlashCoroutine()

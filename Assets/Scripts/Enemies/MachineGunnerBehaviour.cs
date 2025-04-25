@@ -60,7 +60,6 @@ public class MachineGunnerBehaviour : EnemyBehaviour
         Instantiate(flashlight, bulletEmiterTransform.position, Quaternion.identity);
         ShotWithRay();
         yield return new WaitForSeconds(pauseBetweenAttacks);
-        Debug.Log("Уже не стреляет");
         alreadyShoot = false;
     }
 

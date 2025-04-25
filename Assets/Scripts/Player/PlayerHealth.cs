@@ -45,7 +45,7 @@ public class PlayerHealth : MonoBehaviour,IDamageable,IHealable
     {
         if (alive)
         {
-            Debug.Log("Player damaged with ... ");
+            //Debug.Log("Player damaged with ... ");
             health -= damage;
             RefreshUI();
         }

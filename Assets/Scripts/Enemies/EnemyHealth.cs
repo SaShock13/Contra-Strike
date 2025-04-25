@@ -28,10 +28,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
 
     void Update()
     {
-        if (health <= 0 & alive)
-        {
-            Death();
-        }
+        
     }
 
     public void TakeDamage (int damageAmount, bool damageFromLeft = true)
@@ -39,8 +36,11 @@ public class EnemyHealth : MonoBehaviour,IDamageable
         if (alive)
         {
             health -= (float)damageAmount;
-            
-            if (healthBar!=null)
+            if (health <= 0 )
+            {
+                Death();
+            }
+            else if (healthBar!=null)
             {
                 StartCoroutine(nameof(ShowHealthBar));
                 healthBar.fillAmount = health / maxHealth; 
@@ -60,7 +60,7 @@ public class EnemyHealth : MonoBehaviour,IDamageable
         foreach (var bodyCollider in bodyColliders)
         {
             bodyCollider.attachedRigidbody.bodyType = RigidbodyType2D.Static;
-            Debug.Log($" body {bodyCollider.name}");
+            //Debug.Log($" body {bodyCollider.name}");
             bodyCollider.enabled = false;
         }
         

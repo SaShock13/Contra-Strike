@@ -49,7 +49,7 @@ public class EnemysChasing : MonoBehaviour
                 {
                     if (transform.position.x >= rightConstrainPoint?.position.x)
                     {
-                        Debug.Log("Правый ограничитель");
+                        //Debug.Log("Правый ограничитель");
                         Costraining();
                     }
                     else StopConstrain(); 

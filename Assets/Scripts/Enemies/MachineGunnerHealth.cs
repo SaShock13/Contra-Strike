@@ -26,8 +26,9 @@ public class MachineGunnerHealth : EnemyHealth
 
     public override void WhenDead()
     {
+        animator.SetBool("Dead",true);
+        Debug.Log("MG Death");
         
-        animator.SetTrigger("Death");
         //rb.AddForce(Vector2.up * deathJumpForce,ForceMode2D.Impulse);
         //rb.freezeRotation = false;
         //rb.AddTorque(-deathTorqueForce);

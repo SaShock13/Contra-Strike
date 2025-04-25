@@ -85,7 +85,7 @@ public abstract class EnemyBehaviour : MonoBehaviour
                 chasing.StopChasing();
                 if (!alreadyShoot)
                 {
-                    rotator?.StartAiming();
+                    if (rotator!=null) rotator.StartAiming();
                     //if (collider.transform.position.x < transform.position.x)
                     //{
                     //    transform.right = Vector3.right;
@@ -95,11 +95,11 @@ public abstract class EnemyBehaviour : MonoBehaviour
                     Attack(collider.gameObject);
                 } 
             }
-            else rotator?.StopAiming();
+            else if (rotator != null) rotator?.StopAiming();
         }
         else
         {
-            rotator?.StopAiming();
+            if (rotator != null) rotator?.StopAiming();
         }
     }
 

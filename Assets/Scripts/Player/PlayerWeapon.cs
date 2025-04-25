@@ -226,7 +226,7 @@ public class PlayerWeapon : MonoBehaviour
                 if(damageabe!=null)
                 {
                     damageabe.TakeDamage(10);
-                    Debug.Log("HeadShot");
+                    //Debug.Log("HeadShot");
                 }
             }
             if (hit.collider.TryGetComponent<IDamageable>(out IDamageable objToDamage))

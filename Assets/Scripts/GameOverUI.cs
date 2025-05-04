@@ -1,4 +1,4 @@
-using System.Collections;
+п»їusing System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
@@ -11,7 +11,7 @@ public class GameOverUI : MonoBehaviour
 
     private void Start()
     {
-        statisticText.text = "Совершено " + Statistic.killsCount + " убийств!!!" ;
+        statisticText.text = "РЎРѕРІРµСЂС€РµРЅРѕ " + Statistic.killsCount + " СѓР±РёР№СЃС‚РІ!!!" ;
     }
 
     public void ExitBtnClick()

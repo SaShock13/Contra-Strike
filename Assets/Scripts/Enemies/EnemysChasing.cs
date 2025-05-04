@@ -19,7 +19,7 @@ public class EnemysChasing : MonoBehaviour
     private void Awake()
     {
         animator = GetComponentInChildren<Animator>();
-        Debug.Log("EnemyChasing Загружен");
+        //Debug.Log("EnemyChasing Загружен");
     }
 
     private void FixedUpdate()
@@ -35,7 +35,7 @@ public class EnemysChasing : MonoBehaviour
                 {
                     if (transform.position.x <= leftConstrainPoint.position.x)
                     {
-                        Debug.Log("Левый ограничитель");
+                       // Debug.Log("Левый ограничитель");
                         Costraining();
                     }
                     else StopConstrain(); 

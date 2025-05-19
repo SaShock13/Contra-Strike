@@ -1,0 +1,593 @@
+fileFormatVersion: 2
+guid: b7b132a5cfa2ab74cbf5285bc8eadd18
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: PlatfTileSet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 165.33334
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 16, y: 32.833344}
+        - {x: 12, y: 35.833344}
+        - {x: 6, y: 38.833344}
+        - {x: -1, y: 38.833344}
+        - {x: -8, y: 35.833344}
+        - {x: -19, y: 33.833344}
+        - {x: -29, y: 29.833344}
+        - {x: -35.714287, y: 15.8333435}
+        - {x: -35.714287, y: 10.8333435}
+        - {x: -32, y: 0.8333435}
+        - {x: -27, y: -6.1666565}
+        - {x: -31, y: -31.166656}
+        - {x: -28, y: -41.166656}
+        - {x: 35.714287, y: -41.166656}
+        - {x: 35.714287, y: 31.833344}
+      tessellationDetail: 0.26
+      bones: []
+      spriteID: e16f0586422beb44fb13bbd80a7063b7
+      internalID: -581125663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_1
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 165.33334
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape:
+      - - {x: 12, y: 38.833344}
+        - {x: -6, y: 34.833344}
+        - {x: -29, y: 31.833344}
+        - {x: -35.714287, y: 28.833344}
+        - {x: -35.714287, y: -41.166656}
+        - {x: 35.714287, y: -41.166656}
+        - {x: 35.714287, y: 35.833344}
+        - {x: 31, y: 38.833344}
+      tessellationDetail: 0.18
+      bones: []
+      spriteID: 5240f735114d2a9488967e170bf1769e
+      internalID: -831681944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_2
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 165.33334
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a4807f625e546a4f8b34219d0c9f35d
+      internalID: -1758212800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_3
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 165.33334
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb5a33fa9eda9614f807c814f83fb5e0
+      internalID: 610738770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_4
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 165.33334
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1307b65589bee65439aa88e757d0cd29
+      internalID: -226601217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_5
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 165.33334
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74abd56d419a8ea47a2d3050e2aa69a9
+      internalID: -186004038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 83.333336
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2048fa4fc253dc84a83dbe18b97da69f
+      internalID: 528654655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_7
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 83.333336
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b1f76aae62dd149479c0e27fd40951bf
+      internalID: -2110592185
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_8
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 83.333336
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d33c4e12287b34b43a4bd1a245504b9c
+      internalID: 1597693464
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_9
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 83.333336
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d44618a522b906d4f8b2e183eea9010f
+      internalID: -384772562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_10
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 83.333336
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 07d3722a306fde44282503b933a924fb
+      internalID: -674066014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_11
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 83.333336
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bbe725da6ec84234cbcfa491cef70ce7
+      internalID: 977080137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_12
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1.3333359
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd262a4f0e6e6fe4b8e02efdec1129fb
+      internalID: -1056656987
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_13
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 1.3333359
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b0576f264da466418c4ea95072d3d4f
+      internalID: -1987826615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_14
+      rect:
+        serializedVersion: 2
+        x: 142
+        y: 1.3333359
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 25402bf96813d0a4cb0bfb127e351480
+      internalID: -483764249
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_15
+      rect:
+        serializedVersion: 2
+        x: 284
+        y: 1.3333359
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95db42b188e5c2b4e888bc74eec8b8fc
+      internalID: -990595179
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_16
+      rect:
+        serializedVersion: 2
+        x: 355
+        y: 1.3333359
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a86dfa1e9b6a88479b29a2ae1ec4465
+      internalID: 351263851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: PlatfTileSet_17
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1.3333359
+        width: 71.42857
+        height: 82.666664
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f9b25f73d3b303e4aa1f2e967dcf5ae4
+      internalID: -2044541285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      PlatfTileSet_0: -581125663
+      PlatfTileSet_1: -831681944
+      PlatfTileSet_10: -674066014
+      PlatfTileSet_11: 977080137
+      PlatfTileSet_12: -1056656987
+      PlatfTileSet_13: -1987826615
+      PlatfTileSet_14: -483764249
+      PlatfTileSet_15: -990595179
+      PlatfTileSet_16: 351263851
+      PlatfTileSet_17: -2044541285
+      PlatfTileSet_2: -1758212800
+      PlatfTileSet_3: 610738770
+      PlatfTileSet_4: -226601217
+      PlatfTileSet_5: -186004038
+      PlatfTileSet_6: 528654655
+      PlatfTileSet_7: -2110592185
+      PlatfTileSet_8: 1597693464
+      PlatfTileSet_9: -384772562
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

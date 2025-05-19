@@ -1,0 +1,235 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 546069fd762786f4da89225e1989d105, type: 3}
+  m_Name: Explosion1
+  m_EditorClassIdentifier: 
+  inputFrameGUIDs:
+  - f3cabe572b15ead4faef44ddc62c8beb
+  - affb1c24ee32cb24682c2714488a15dd
+  - fb79ffa6328dfdd43ba50ea986bc597c
+  - 60d356aa76afb1545a6312102bc8f779
+  - 988cdd46690fdf646a080f3139fcedb7
+  - af8a84dcad6053544880afa7590d6074
+  - 753e8b530c8bd1f4593d403fa6d5f8c0
+  - 4bd03b9357ea4a0429987f1c3d6e3468
+  - 0ba346409fe22f9448c7727272af2649
+  - 28e7bf755d7304f419e64c9231172bc8
+  - 6118d52e6283d614a830babd87eba516
+  - 7cbd3fc9ce12d0c4c87209e1cdb73147
+  - 864c50519241cbc438aab3e47e96a517
+  - 05a7de26f11cff44e9404ce1e9d986c7
+  - c8b3d642c41396a4996e6de5ec3dd146
+  - 0e2d8a1b6b3e6af4c890716e423a180a
+  - 80065efa76ccf574fa2b435a209c574f
+  - c3ce8fb2259097f498a4cdad9a073c16
+  - 43108e0b6ae92b449b368aaa6479cf4d
+  - 9fe69db861cdb484e8c25963dc462aad
+  - 6fe2e310cedcc6846a988ad537609ac4
+  - 4dc13f35658cdfa4eaf1c841fca6919e
+  - 082b2bfef0e8a0c449b0928c2b1a80b8
+  - b90ab09e7ec83354abfdfe63bd81a1f1
+  - bf3358086ce706545b3af184f4de09a4
+  - 024ffec717cc3954f9605aee06000704
+  - 29ffb68365068f445a0614a43930f67e
+  - 745cb7ec5699ba94c8c70154ab0072aa
+  - 080cd3516bcd40d42ae23c199f755393
+  - c067f1e7c998a6c40ac601655366be89
+  - 24577117afbed2848ad1fbe888008d53
+  - 800c534315c554546b8f45815a067379
+  - ead60b96d0a284641b7690407a62c8f3
+  - 4a9646f12d4870c48b0cdd19eb9c9550
+  - d6435584d3857a84da93b6f9f3dadd91
+  - f7de59131af57be41a1a42e0c1138513
+  - 8a6dae1e19ca8744f8eca7bd7b5cdb4f
+  - 5abdb18dd5537de4bada3f0983984d69
+  - 1bc1efe7542fcb7449619ab99997a0e6
+  - fdafedd2f43ba8547846e3e35b7ac0e2
+  - 5dc0ca8285440b542bd57c5630d60e98
+  - 65a99194170640940b417d8a11f75150
+  - 9897b1617c9f6174a996cfb6883acc6a
+  - 1f3b14f0a5ff58c47b66a02ea8708cbb
+  - 8fc35a9ff2ca0eb4bb10f7ed29bcb43d
+  - 9de722340ec3b10428daa81f433e3020
+  - e1317450905d14e4d9227e545380ce70
+  - 84ca30294915d914188b58fe60eab4d9
+  - 533930b23f0b83b4b883a85c26aa72e9
+  - 6ec48acedadfbff47b2b24961c5ee6d5
+  - 41835f6e67dc93f49ab28bad6cf15464
+  - 16b4e121f41f437438309c64b6258fb3
+  - 95c325baec310504f9b2a71cc9276e4f
+  - 5b40f391dd3616749bd6abf09fb2f11e
+  - 3c9140203c1824642aa67c510fc1d791
+  - 1ea1e11b9d5cf1b42832134493cb11d7
+  - fd522ed2af875de489c9ed24828b3340
+  - 431bb12edebddb94086100f106114ebe
+  - 08a6dee12fcd1304abaa99e9fea278b2
+  - b28c006adaec067448438f1ed824f98f
+  - c29627fa063599a49960125672b325b2
+  - a59570fc8eeecf2489746eb967e90556
+  - e06aa30207e5da5439b781ae2defe5ad
+  - bc0413d3e6fbc86418e670e6759c9432
+  - f889e357f59246048a1f424d8d4bd2ba
+  - 9d7e5a76fa57b6647b4fa4d8590883ac
+  - fd682154d36f2ca47a0f3a32b386f79c
+  - cc9600821a79be24e8eb5de2bce19377
+  - 311890a661df8a6458aeb760b6c1d2f5
+  - 74b237cf4d8eb104fbeda75352250bf1
+  - cee1f1bbb6efe61498a5c04c0c08ac9e
+  - 9def6110362929746860dbfcc5b57fdb
+  - d88b995687cfd8a448b9e24979ba14d5
+  - c0c27689aaa1ddb4cb3dcaae0d47fad9
+  - 64b62123d0fab4142a577f01e4572ec2
+  - 6f98702686aa1114f83abb1134289afd
+  - b5ef3ff78502cff48924da87ff167968
+  - 5fd31994bc91bc5479e4d330df8274b4
+  - 91a49ff7088bd4a458ddffcf0ebe76d5
+  - a0c157324621f5843a0a75aaaaa1f286
+  - b04ff9696f0318f4ba336bc04105d2cc
+  - a7d286071dc080a4d995a4eb4202944d
+  - 6427c926ffd650c4bbe5c1b13a696696
+  - 691c59bf038dcd94ab43a504fe8a13a7
+  - 4886a98853d6d5e4f9c8efad29ee3d87
+  - 4aebb33547de2354591d21d6d89bc117
+  - e5acb095b139d11439a6234267e05650
+  - 36ccc7c2fdfe2ea4cb5925fe5ebf9434
+  - 8ae19594648ae824b9cdc1f4c63e232c
+  - 5931b305f8aab8b4b978c742aea711c1
+  - 499caa954723eb9408c543750d87c4ff
+  - 5860cc950f0e60f4c941ad501076aef1
+  - 43f7ff514e9efff47af4cba07b4961a6
+  - 71f8f2d080c7b82489c06c01fb50e163
+  - 18291c86314dbf14b91fe77060e39cc1
+  - a4b7916d7619cc14e878c183fa5e39ca
+  - 22e3ba4387a85bc478b8a6a5b323ca37
+  - 065e6e2aa5a926e4bab9f2170790fbc7
+  - b082d60767d65854ca9f6064c01d635e
+  - 933b588d2b32e5244b3ff1bf9e7a3ed0
+  processorInfos:
+  - {fileID: 8561119440293769972}
+  - {fileID: 3093636464031232679}
+  exportSettings:
+    fileName: Assets/VFX/Sequences/Explosion1_10x10.tga
+    frameCount: 1
+    outputShape: 0
+    exportMode: 0
+    exportAlpha: 1
+    exportSeparateAlpha: 0
+    sRGB: 1
+    highDynamicRange: 0
+    compress: 1
+    generateMipMaps: 1
+    wrapMode: 0
+    filterMode: 1
+    dataContents: 0
+  editSettings:
+    selectedProcessor: 1
+    lockedProcessor: -1
+  inheritSettingsReference: {fileID: 0}
+--- !u!114 &1503172858790744449
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d77e015c9f1a1eb44a23bc84ec1b265d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  FlipbookNumU: 5
+  FlipbookNumV: 5
+  Mode: 0
+--- !u!114 &3093636464031232679
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43fd70c9b64e53a4e8702dbd00412a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enabled: 1
+  Settings: {fileID: 1503172858790744449}
+--- !u!114 &7693304738286574531
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67121233fc1872a4e9b4d2c8f5fc6542, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  curve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.3309091
+      value: 35.75
+      inSlope: 178.30286
+      outSlope: 178.30286
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.6181818
+      value: 69.666664
+      inSlope: 102.89134
+      outSlope: 102.89134
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 99
+      inSlope: 58.624004
+      outSlope: 58.624004
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  outputSequenceLength: 100
+  useCurve: 1
+--- !u!114 &8561119440293769972
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 43fd70c9b64e53a4e8702dbd00412a0f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Enabled: 1
+  Settings: {fileID: 7693304738286574531}
